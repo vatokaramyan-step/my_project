@@ -1,4 +1,5 @@
 # apis/views.py
+
 from rest_framework import generics
 
 from todos import models
@@ -11,6 +12,7 @@ class ListTodo(generics.ListCreateAPIView):
 class DetailTodo(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Todo.objects.all()
     serializer_class = TodoSerializer
+
 
 
 
